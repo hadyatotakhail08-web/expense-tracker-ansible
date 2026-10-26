@@ -1,0 +1,11 @@
+---
+- name: Configure the expense tracker web server
+  hosts: webservers
+  become: true
+  vars:
+    app_dir: /opt/expense-tracker
+    app_port: 5050
+
+  roles:
+    - common
+    - app
